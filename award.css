@@ -1,0 +1,99 @@
+/* Award Section */
+#awards .panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal columns on larger screens */
+    gap: 20px;  /* Add space between items */
+    padding: 20px;  /* Increase padding inside the panel for better spacing */
+    justify-items: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    margin-top: 30px;  /* Add more space between the panel and content above */
+    margin-bottom: 30px;  /* Add space below the panel */
+}
+
+#awards h3{
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    color: #fff;
+    padding: 10px;
+}
+#awards p {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0px;
+    max-width: 900px;
+    text-align: justify;
+    padding: 10px;
+}
+#paracenter{
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#awards .panel .details {
+    margin-bottom: 20px;
+    text-align: left;  /* Keep text aligned to the left */
+    grid-column: span 4;  /* Ensure the text takes the entire first row */
+}
+
+#awards p.issued-text {
+    text-align: center;
+}
+#awards .panel img.award-img {
+    width: 160px;  /* Increase size */
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;  /* Prevent overflow on smaller screens */
+    border-radius: 8px;  /* Optional: Border radius for aesthetics */
+}
+
+
+#awards .panel img.award-img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #awards .panel {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        padding: 15px;  /* 2 equal columns for medium screens */
+    }
+    #awards p.issued-text {
+        text-align: left; /* Left-align on smaller screens */
+    }
+
+    #awards .panel .details {
+        grid-column: span 2;  /* Ensure text takes up two columns in the first row */
+    }
+
+    #awards .panel img.award-img {
+        width: 120px;  /* Resize images for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #awards .panel {
+        grid-template-columns: 1fr;
+        width: 90%;
+        padding: 15px;  /* Single column layout for small screens */
+    }
+
+    #awards .panel .details {
+        grid-column: span 1;  /* Text stays in the first row */
+    }
+
+    #awards .panel img.award-img {
+        width: 120px;  /* Resize images for small screens */
+    }
+}
