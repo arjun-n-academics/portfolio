@@ -82,3 +82,52 @@ h2::after {
     margin-top: 10px;
 }
 
+
+
+.typewriter-container {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white /* Yellow */
+    font-family: monospace;
+  
+    /* Center horizontally */
+    text-align: center;
+    width: 100%;      /* make container full width so text-align works */
+    margin-top: 1rem; /* spacing below name */
+  }
+  
+  /* blinking cursor */
+  #typed-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    color: white;
+  }
+  #typed-text{
+    text-decoration: underline #cc5200;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  
+  .image-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0.3rem solid  white;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  
