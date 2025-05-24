@@ -103,7 +103,7 @@ h2::after {
     color: white;
   }
   #typed-text{
-    text-decoration: underline #cc5200;
+    text-decoration: underline  white;
   }
   
   @keyframes blink {
